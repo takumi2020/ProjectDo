@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+$font-family: 'Lato', sans-serif;
+
+
+.wrapper{
+  display: flex;
+}
+.side{
+  $width: calc(100% - 80vw);
+  width: $width;
+  height: 100vh;
+  // background-color: lightgreen;
+  &Prof{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-icon{
+      margin-top: 30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    &-name{
+      font-size: 25px;
+      width: 20vw;
+      height: auto;
+      // background-color: green;
+      font-family: $font-family;
+      text-align: center;
+      
+    }
+  }
+  &Project{
+    overflow: scroll;
+    width: 270px;
+    height: 410px;
+    // background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 10px;
+    &Icon{
+      padding-left: 13px;
+      line-height: 80px;
+      font-size: 17px;
+      width: 220px;
+      height: 80px;
+      background-color: #ffffff;
+      border-bottom: 15px;
+      margin: 20px;
+      border-radius: 10px;
+      border: 1px solid #eeeeee;
+    }
+  }
+  
+}
+
+// 右側タスク部分
+.main{
+  width: 80vw;
+  height: 100vh;
+  .project{
+    margin-left: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+    width: 75vw;
+    height: 25vh;
+    // background-image: url(https://beiz.jp/images_L/sky/sky_00011.jpg);
+    // background-color:rgba(255,255,255,0.5);
+    // background-blend-mode:lighten;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-name{
+      margin-left: 30px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    &-edit{
+      margin-right: 10px;
+      &__btn{
+        display: flex;
+        
+      }
+    }
+  }
+
+  .taskadd-inputBox{
+    height: 8vh;
+    line-height: 8vh;
+    padding-left: 80px;
+    &holder{
+      padding-left: 15px;
+      width: 400px;
+      border-radius: 10px;
+    }
+    &Btn{
+      width: 100px;
+      margin-left: 20px;
+      border-radius: 10px;
+    }
+  }
+  // メインタスク部分
+  .task{
+    padding-left: 30px;
+    width: 80vw;
+    height: 67vh;
+    // background-color: skyblue;
+    overflow: scroll;
+    &Top{
+      &-content{
+        height: 50px;
+        display: flex;
+        line-height: 50px;
+        $padding: 0 30px;
+        padding: $padding;
+        &__title{
+          padding-left: 60px;
+          height: 50px;
+          width: 315px;
+        }
+        &Status{
+          padding: 0 0 0 60px;
+        }
+        &Target{
+          margin: 0 10px 0 30px;
+          padding: $padding;
+        }
+        &Name{
+          margin-left: 30px;
+          padding: $padding;
+        }
+        &Good__btn{
+          margin-left: 30px;
+        }
+      }
+    }
+    &foot{
+      margin-top: 5px;
+      &-content{
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        // background-color: pink;
+        line-height: 50px;
+        $padding: 0 30px;
+        padding: $padding;
+
+        &__title{
+          padding-left: 30px;
+          height: 50px;
+          width: 350px;
+        }
+        &Status{
+          border: 1px solid #ffffff;
+          padding: 0 15px;
+          border: 1px solid #eeeeee;
+          border-radius: 10px;
+        }
+        &Target{
+          font-size: 13px;
+          padding: $padding;
+        }
+        &Name{
+          
+        }
+        &Good__btn{
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+}
+
+
+.project-edit__btn2{
+  margin-left: 50px;
+  margin-right: 20px;
+}
